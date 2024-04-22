@@ -1,0 +1,50 @@
+    <header>
+        <h1>Fashion</h1>
+        <div class="header-list">
+        <ul>
+            <li><%= link_to "服装一覧", cloths_path %></li>
+            <li><%= link_to "新規投稿",new_cloth_path %></li>
+        </ul>
+        </div>
+    </header>
+<h1>マイページ</h1>
+<%= image_tag @user.image_url, size: "70x100" if @user.image? %>
+<p>名前 : <%= @user.username %></p>
+<p>メールアドレス : <%= @user.email %></p>
+<p>プロフィール : <%= @user.profile %></p>
+
+<% if current_user.id == @user.id %>
+    <%= link_to "編集する", edit_user_registration_path %>
+<% end %>
+
+<h2>ユーザーの投稿一覧</h2>
+<% @user.cloths.each do |t| %>
+    <%= t.user.username %>
+    <%= image_tag t.image_url, size: "240x300" if t.image? %>
+    <%= t.tops %>
+    <%= t.outer %>
+    <%= t.pants %>
+    <%= t.color %>
+    <%= t.size %>
+    <%= t.price %>
+    <%= t.brand %>
+    <%= t.place %>
+<% end %>
+
+<!-- 以下はいいね機能を実装している場合-->
+<h2>ユーザーがいいねした投稿一覧</h2>
+<% @user.liked_cloths.each do |t| %>
+    <%= t.user.username %>
+    <%= image_tag t.image_url, size: "240x300" if t.image? %>
+    <%= t.tops %>
+    <%= t.outer %>
+    <%= t.pants %>
+    <%= t.color %>
+    <%= t.size %>
+    <%= t.price %>
+    <%= t.brand %>
+    <%= t.place %>
+<% end %>
+<!-- ここまで-->
+
+<%= link_to "服装一覧に戻る", cloths_path %>

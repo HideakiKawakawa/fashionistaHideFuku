@@ -1,0 +1,30 @@
+// Place all the styles related to the cloths controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+header {
+    background-color: #E5EFC1;
+    height: 80px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header a {
+    color: #1A132F; 
+    text-decoration: none; 
+}
+header h1 {
+    color: #1A132F;
+    margin-left: 20px;
+}
+.header-list {
+    display: flex;
+    align-items: center;
+}
+header ul {
+    display: flex;
+}
+header li {
+    list-style: none;
+    margin-right: 40px;
+}

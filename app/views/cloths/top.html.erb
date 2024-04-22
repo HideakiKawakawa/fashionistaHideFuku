@@ -1,0 +1,63 @@
+<%= stylesheet_link_tag 'top', :media => "all" %>
+<html>
+<body>
+<section id='top_first'>
+    <div>
+    <%= image_tag 'top_first_photo.jpg',class:'top_first_photo'%>
+        <p class='top_first1'>
+            <a><%= link_to "ログイン", cloths_path %></a>
+            <a><%= link_to "新規登録", new_user_registration_path %></a>
+        </p>
+
+        <p class='top_first2'>
+        Ideal Coordination
+        </p>
+    </div>
+</section>
+
+<section id='top_second'>
+    <div>
+    <%= image_tag 'top_second_photo.jpg',class:'top_second_photo'%>
+        <div class='top_second1'>
+            <p>一人一人にあった</p>
+            <p>コーディネートを</p>
+        </div>
+    </div>
+</section>
+
+<section id='top_third'>
+    <div class='top_third_container'>
+        <div class='top_third1'>
+            <div class='top_third1_a'>
+                きれいめコーデ
+            </div>
+            <div class="top_third_photo">
+            <%= image_tag 'top_third_photo.jpg'%>  
+            </div>
+        </div>
+        <div class='top_third1_b'>
+            <p>ジャケットとパーカーなど、</p>
+            <p>カジュアルなアイテムを使い、着こなすことができます</p>
+        </div>
+    </div>
+</section>
+
+<section id='top_fourth'>
+    <div class='top_fourth_container'>
+        <div class='top_fourth1'>
+            <div class="top_fourth_photo">
+            <%= image_tag 'top_fourth_photo.jpg'%>
+            </div>
+            <div class='top_fourth1_a'>
+                ストリートコーデ
+            </div>
+        </div>
+        <div class='top_fourth1_b'>
+            <p>オーバーサイズのアイテムを取り入れ、</p>
+            <p>ゆったりとしたルーズなシルエットが特徴的です</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
